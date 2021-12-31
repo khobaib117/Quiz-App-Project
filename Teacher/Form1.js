@@ -3,8 +3,9 @@ import React from 'react';
 import { 
   View,
   Text, 
-  StyleSheet, 
-  Button
+  Button,
+  TouchableOpacity,
+  StyleSheet
 } from 'react-native'
 
 const Form=({navigation})=>{
@@ -12,49 +13,23 @@ const Form=({navigation})=>{
     
     <View style={{backgroundColor:'#9CDDEB', height:'100%'}}>
 
-    <View style={{ 
-    backgroundColor:'#E3E6E7',
-    borderRadius: 10,
-    borderColor:'white',
-    borderWidth: 4, 
-    paddingTop:10,
-    paddingBottom:10,
-    margin:10}}>
 
+ <TouchableOpacity style={styles.form} onPress={()=> navigation.navigate("Tabletech")}>
+   <Text style={{paddingLeft:10, fontWeight:'bold', fontSize:20}}>TOA</Text>
+ </TouchableOpacity>
+    <View style={styles.form}>
     <Text style={{paddingLeft:10, fontWeight:'bold', fontSize:20}}>MAD</Text>
     </View>
 
-    <View style={{
-      backgroundColor:'#E3E6E7',
-      borderRadius: 10,
-      borderColor:'white',
-    borderWidth: 4, 
-    paddingTop:10,
-    paddingBottom:10,
-    margin:10}}>
-
+    <View style={styles.form}>
     <Text style={{paddingLeft:10,fontWeight:'bold',fontSize:20}}>Calculus</Text>
     </View>
 
-    <View style={{
-      backgroundColor:'#E3E6E7' ,
-      borderRadius: 10,
-      borderColor:'white',
-    borderWidth: 4, 
-    paddingTop:10,
-    paddingBottom:10,
-    margin:10}}>
+    <View style={styles.form}>
     <Text style={{paddingLeft:10,fontWeight:'bold',fontSize:20}}>Dataware</Text>
     </View>
 
-    <View style={{
-      backgroundColor:'#E3E6E7',
-      borderColor:'white',
-      borderRadius: 10,
-    borderWidth: 4, 
-    paddingTop:10,
-    paddingBottom:10,
-    margin:10}}>
+    <View style={styles.form}>
     <Text style={{paddingLeft:10,fontWeight:'bold',fontSize:20}}>DevOps</Text>
     </View>
 
@@ -67,4 +42,17 @@ const Form=({navigation})=>{
    
   
   )};
+
+  const styles=StyleSheet.create({
+    form:{
+      backgroundColor:'#E3E6E7' ,
+      borderRadius: 10,
+      borderColor:'white',
+    borderWidth: 4, 
+    paddingTop:10,
+    paddingBottom:10,
+    margin:10
+    }
+
+  })
   export default Form;

@@ -5,7 +5,8 @@ import {createStackNavigator} from '@react-navigation/stack'
 import Signup from './Student/Signup';
 import Login from './Student/Login';
 import Form from './Teacher/Form';
-import Form1 from './Teacher/Form1'
+import Form1 from './Teacher/Form1';
+import Tabletech from './Teacher/Tabletech';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +19,9 @@ const App=()=>{
    {/* <Stack.Screen  name='Signup' component={Signup}  />
    <Stack.Screen  name='Login' component={Login}  /> */}
    <Stack.Screen  name='Form1' component={Form1}  />
-   <Stack.Screen  name='Form' component={Form}  /> 
+   {/* <Stack.Screen  name='Form' component={Form}  />  */}
+   <Stack.Screen name='Tabletech' component={Tabletech}/>
+
  
  </Stack.Navigator>
 </NavigationContainer>
