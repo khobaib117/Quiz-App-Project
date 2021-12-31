@@ -8,16 +8,17 @@ import {
   StyleSheet,
   TextInput,
   Button,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 
-const Login = () => {
+const Login = ({ navigation }) => {
 
   return (
 
     <>
 
-<View style={{ alignItems: 'center' }}>
+      <View style={{ alignItems: 'center' }}>
         <Text style={{ fontWeight: 'bold', fontSize: 30 }}>Login</Text>
       </View>
       {/* <View style={{ height: 20, width: 20, justifyContent: 'center' }}>
@@ -52,17 +53,24 @@ const Login = () => {
           width: 100,
           alignSelf: 'center'
         }}>
-        <Button title='Login'></Button>
+        <Button title='Log in'></Button>
       </View>
-      <View >
+      <View style={{ flexDirection: 'row', paddingLeft: 10, paddingTop: 20, justifyContent: 'center' }}>
         <Text style={{
           fontWeight: 'bold',
-          fontSize: 20,
-          textAlign: 'center'
+          fontSize: 13,
+          textAlign: 'center',
+          paddingTop: 28
         }}>Don't have an Account?</Text>
 
-      </View>
+<View style={{paddingLeft:15, paddingTop:20}}>
+      <Button title='Sign up' onPress={()=> navigation.navigate("Signup")}>
+        </Button>
 
+
+
+      </View>
+      </View>
 
 
     </>
